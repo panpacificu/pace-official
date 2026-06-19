@@ -2,8 +2,8 @@
 
 Professional Advancement Continuing Education website starter for GitHub Pages.
 
-Current Version: `1.0.8`  
-Last Update: `June 19, 2026 11:37 AM`
+Current Version: `1.0.9`  
+Last Update: `June 19, 2026 11:42 AM`
 
 This version is simplified for easier GitHub uploading.
 
@@ -220,3 +220,11 @@ status | order | date | category | title | excerpt | image | url | createdAt
 - Redesigned all six remaining course cards using visual preview images.
 - Course previews now follow the same image-first layout as the News cards.
 - Added cache-busting parameters for version 1.0.8.
+
+
+## v1.0.9 Footer Alignment
+
+- Aligned `Panpacific University` with `Connect with us`.
+- Aligned `Professional Advancement Continuing Education (PACE)` with the email row.
+- Preserved the compact footer height and lower address line.
+- Updated cache-busting parameters to version 1.0.9.
