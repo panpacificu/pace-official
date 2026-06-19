@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PACE | Professional Advancement Continuing Education</title>
+  <meta name="description" content="PACE - Professional Advancement Continuing Education by Panpacific University." />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <header class="site-header" id="siteHeader">
+    <a href="index.html" class="brand">
+      <span class="brand-mark">PACE</span>
+      <span class="brand-text">Professional Advancement<br />Continuing Education</span>
+    </a>
+
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+      <span></span><span></span><span></span>
+    </button>
+
+    <nav class="site-nav" id="siteNav">
+      <a href="index.html" class="active">Home</a>
+      <a href="about.html">About</a>
+      <a href="admission.html">Admission</a>
+      <a href="contact.html">Contact Us</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero-section">
+      <div class="hero-overlay"></div>
+      <div class="hero-content container">
+        <p class="eyebrow" data-config="heroEyebrow">Professional Advancement Continuing Education</p>
+        <h1 data-config="heroTitle">Build your next professional advantage with PACE.</h1>
+        <p class="hero-copy" data-config="heroSubtitle">
+          Flexible continuing education programs designed for career growth, skills upgrading, and professional development.
+        </p>
+        <div class="hero-actions">
+          <a href="#courses" class="btn btn-primary">View Courses</a>
+          <a href="admission.html" class="btn btn-secondary">Admission Details</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-light" id="courses">
+      <div class="container">
+        <div class="section-heading">
+          <p class="eyebrow">Programs</p>
+          <h2>Courses Offered</h2>
+          <p>Add, remove, or edit course cards easily inside <code>js/config.js</code>.</p>
+        </div>
+
+        <div class="cards-grid" id="coursesGrid"></div>
+      </div>
+    </section>
+
+    <section class="section" id="news">
+      <div class="container">
+        <div class="section-heading">
+          <p class="eyebrow">Updates</p>
+          <h2>News</h2>
+          <p>Use this area for announcements, enrollment updates, schedules, and featured stories.</p>
+        </div>
+
+        <div class="news-grid" id="newsGrid"></div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div>
+        <h3>PACE</h3>
+        <p>Professional Advancement Continuing Education</p>
+        <a href="mailto:pace@panpacificu.edu.ph">pace@panpacificu.edu.ph</a>
+      </div>
+      <div class="footer-meta">
+        <p>Version: <span id="siteVersion">1.0.0</span></p>
+        <p>Last Update: <span id="lastUpdate">—</span></p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/config.js"></script>
+  <script src="js/script.js"></script>
+</body>
+</html>
