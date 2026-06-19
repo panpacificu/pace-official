@@ -9,7 +9,13 @@
 </head>
 <body>
   <header class="site-header" id="siteHeader">
-    <a href="index.html" class="brand">
+    <a href="index.html" class="brand" aria-label="PACE Home">
+      <img
+        src="panpacific-university-logo.png"
+        alt="Panpacific University"
+        class="university-logo"
+      />
+      <span class="brand-divider" aria-hidden="true"></span>
       <span class="brand-mark">PACE</span>
       <span class="brand-text">Professional Advancement<br />Continuing Education</span>
     </a>
@@ -69,15 +75,41 @@
   </main>
 
   <footer class="site-footer">
-    <div class="container footer-inner">
-      <div>
-        <h3>PACE</h3>
-        <p>Professional Advancement Continuing Education</p>
-        <a href="mailto:pace@panpacificu.edu.ph">pace@panpacificu.edu.ph</a>
+    <div class="container footer-main">
+      <div class="footer-office">
+        <h3>Panpacific University</h3>
+        <p>Professional Advancement Continuing Education (PACE)</p>
+        <address>
+          4F, PCST Building<br />
+          MacArthur Highway, Urdaneta City,<br />
+          Philippines, 2428
+        </address>
       </div>
+
+      <div class="footer-contact">
+        <h3>Connect with us</h3>
+        <div class="footer-email-grid">
+          <a href="mailto:pace@panpacificu.edu.ph">
+            <span class="footer-email-icon" aria-hidden="true"></span>
+            pace@panpacificu.edu.ph
+          </a>
+          <a href="mailto:cit@panpacificu.edu.ph">
+            <span class="footer-email-icon" aria-hidden="true"></span>
+            cit@panpacificu.edu.ph
+          </a>
+          <a href="mailto:pace.it@panpacificu.edu.ph">
+            <span class="footer-email-icon" aria-hidden="true"></span>
+            pace.it@panpacificu.edu.ph
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="container footer-bottom">
+      <p>PACE · Panpacific University</p>
       <div class="footer-meta">
-        <p>Version: <span id="siteVersion">1.0.0</span></p>
-        <p>Last Update: <span id="lastUpdate">—</span></p>
+        <span>Version <strong id="siteVersion">1.0.0</strong></span>
+        <span>Last Update <strong id="lastUpdate">—</strong></span>
       </div>
     </div>
   </footer>
