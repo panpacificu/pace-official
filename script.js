@@ -38,14 +38,17 @@ function renderCourses() {
   const grid = document.getElementById("coursesGrid");
   if (!grid || typeof PACE_CONFIG === "undefined") return;
 
-  grid.innerHTML = PACE_CONFIG.courses.map(course => `
-    <article class="course-card">
-      <div class="course-icon">${escapeHTML(course.icon)}</div>
-      <h3>${escapeHTML(course.title)}</h3>
-      <p>${escapeHTML(course.description)}</p>
-      <div class="card-meta">${escapeHTML(course.meta)}</div>
-    </article>
-  `).join("");
+  grid.innerHTML = PACE_CONFIG.courses.map(course => {
+    const url = course.url || "#";
+    return `
+      <a class="course-card" href="${escapeHTML(url)}">
+        <div class="course-icon">${escapeHTML(course.icon)}</div>
+        <h3>${escapeHTML(course.title)}</h3>
+        <p>${escapeHTML(course.description)}</p>
+        <div class="card-meta">${escapeHTML(course.meta)}</div>
+      </a>
+    `;
+  }).join("");
 }
 
 function renderNews() {

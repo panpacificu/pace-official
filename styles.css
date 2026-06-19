@@ -1,7 +1,7 @@
 /* =========================================================
    PACE Website Starter
-   Version: 1.0.1
-   Typography Update: Inter with tighter academic kerning
+   Version: 1.0.2
+   Course Pages + Compact Layout Update
    For GitHub Pages + optional Google Apps Script integration
    ========================================================= */
 
@@ -154,7 +154,7 @@ code {
 
 .hero-section {
   position: relative;
-  min-height: calc(100vh - 82px);
+  min-height: 620px;
   display: flex;
   align-items: center;
   overflow: hidden;
@@ -174,7 +174,7 @@ code {
 .hero-content {
   position: relative;
   z-index: 2;
-  padding: 96px 0;
+  padding: 72px 0;
   max-width: 820px;
   margin-inline: auto auto;
 }
@@ -202,9 +202,9 @@ h3 {
 
 h1 {
   max-width: 860px;
-  margin-bottom: 22px;
+  margin-bottom: 16px;
   color: white;
-  font-size: clamp(3rem, 7.5vw, 6.2rem);
+  font-size: clamp(2.8rem, 6.8vw, 5.4rem);
   font-weight: 800;
 }
 
@@ -254,7 +254,7 @@ h1 {
 /* Sections */
 
 .section {
-  padding: 92px 0;
+  padding: 56px 0;
   background: white;
 }
 
@@ -267,13 +267,13 @@ h1 {
 
 .section-heading {
   max-width: 720px;
-  margin-bottom: 34px;
+  margin-bottom: 24px;
 }
 
 .section-heading h2 {
   margin-bottom: 14px;
   color: var(--pace-deep-blue);
-  font-size: clamp(2.1rem, 4.6vw, 4.1rem);
+  font-size: clamp(2rem, 4vw, 3.6rem);
   font-weight: 780;
 }
 
@@ -286,7 +286,7 @@ h1 {
 .news-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 22px;
+  gap: 18px;
 }
 
 .course-card,
@@ -299,10 +299,27 @@ h1 {
   box-shadow: var(--pace-shadow);
 }
 
+.course-card {
+  color: inherit;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+}
+
+.course-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(0, 87, 184, 0.24);
+  box-shadow: 0 18px 58px rgba(7, 27, 51, 0.14);
+}
+
+.course-icon {
+  font-size: 1rem;
+  letter-spacing: -0.04em;
+}
+
+
 .course-card,
 .news-card {
-  padding: 28px;
-  min-height: 260px;
+  padding: 24px;
+  min-height: 230px;
   display: flex;
   flex-direction: column;
 }
@@ -310,7 +327,7 @@ h1 {
 .course-icon {
   width: 58px;
   height: 58px;
-  margin-bottom: 22px;
+  margin-bottom: 16px;
   border-radius: 18px;
   display: grid;
   place-items: center;
@@ -337,7 +354,7 @@ h1 {
 
 .card-meta {
   margin-top: auto;
-  padding-top: 22px;
+  padding-top: 16px;
   color: var(--pace-blue);
   font-size: 0.88rem;
   font-weight: 700;
@@ -346,7 +363,7 @@ h1 {
 /* Inner Pages */
 
 .page-hero {
-  padding: 92px 0;
+  padding: 56px 0;
   background:
     linear-gradient(135deg, rgba(6, 43, 99, 0.96), rgba(0, 87, 184, 0.85)),
     radial-gradient(circle at 80% 20%, rgba(0, 168, 120, 0.25), transparent 35%);
@@ -383,7 +400,7 @@ h1 {
 .contact-layout {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 22px;
+  gap: 18px;
 }
 
 .contact-card {
@@ -403,10 +420,65 @@ h1 {
   color: var(--pace-muted);
 }
 
+
+/* Course Detail Pages */
+
+.course-detail-layout {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 22px;
+  align-items: start;
+}
+
+.course-detail-card,
+.course-side-card {
+  padding: 34px;
+  border: 1px solid var(--pace-border);
+  border-radius: var(--radius-lg);
+  background: white;
+  box-shadow: var(--pace-shadow);
+}
+
+.course-detail-card h2,
+.course-side-card h2 {
+  margin-bottom: 12px;
+  color: var(--pace-deep-blue);
+  font-size: 1.8rem;
+  letter-spacing: -0.035em;
+}
+
+.course-detail-card p,
+.course-side-card p {
+  color: var(--pace-muted);
+}
+
+.course-list {
+  margin: 18px 0 0;
+  padding-left: 18px;
+  color: var(--pace-muted);
+}
+
+.course-list li {
+  margin-bottom: 8px;
+}
+
+.back-link {
+  display: inline-flex;
+  margin-top: 20px;
+  color: var(--pace-blue);
+  font-weight: 700;
+}
+
+@media (max-width: 900px) {
+  .course-detail-layout {
+    grid-template-columns: 1fr;
+  }
+}
+
 /* Footer */
 
 .site-footer {
-  padding: 42px 0;
+  padding: 26px 0;
   color: rgba(255, 255, 255, 0.82);
   background: var(--pace-navy);
 }
@@ -419,13 +491,13 @@ h1 {
 }
 
 .site-footer h3 {
-  margin-bottom: 8px;
+  margin-bottom: 4px;
   color: white;
-  font-size: 1.7rem;
+  font-size: 1.35rem;
 }
 
 .site-footer p {
-  margin: 0 0 6px;
+  margin: 0 0 3px;
 }
 
 .site-footer a {
@@ -502,6 +574,6 @@ h1 {
 
   .section,
   .page-hero {
-    padding: 64px 0;
+    padding: 48px 0;
   }
 }

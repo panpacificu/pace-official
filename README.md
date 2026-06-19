@@ -2,6 +2,9 @@
 
 Professional Advancement Continuing Education website starter for GitHub Pages.
 
+Current Version: `1.0.2`  
+Last Update: `June 19, 2026 03:06 AM`
+
 This version is simplified for easier GitHub uploading.
 
 All files are placed in one folder only. No subfolders are needed.
@@ -13,6 +16,13 @@ index.html
 about.html
 admission.html
 contact.html
+course-cit.html
+course-eteeap.html
+course-ler.html
+course-plc.html
+course-pgs.html
+course-tvet-tesda.html
+course-training-services.html
 styles.css
 config.js
 script.js
@@ -21,29 +31,52 @@ Code.gs
 README.md
 ```
 
-## Main Website Files
+## Pages Included
 
-Upload these files directly to your GitHub repository:
+Main pages:
+
+- Home
+- About
+- Admission
+- Contact Us
+
+Course pages:
+
+- Certificate in Teaching (CIT)
+- Expanded Tertiary Education Equivalency and Accreditation Program (ETEEAP)
+- Licensure Examination Review (LER)
+- PACE Panpacific Language Center (PLC)
+- Panpacific Graduate School (PGS)
+- Technical-Vocational Education and Training (TVET-TESDA)
+- Training & Services
+
+## v1.0.2 Updates
+
+- Added one page per course.
+- Homepage course cards are now clickable.
+- Section spacing was made more compact.
+- Footer height was reduced.
+- Version and Last Update are still controlled through `config.js`.
+
+## How to Edit Course Cards
+
+Open:
 
 ```text
-index.html
-about.html
-admission.html
-contact.html
-styles.css
 config.js
-script.js
-hero-placeholder.svg
-README.md
 ```
 
-## Optional File
+Edit the `courses` array.
 
-```text
-Code.gs
+Each course card has:
+
+```js
+icon: "CIT",
+title: "Certificate in Teaching",
+description: "Course description here.",
+meta: "View course details",
+url: "course-cit.html"
 ```
-
-This is only for future Google Apps Script contact form integration. You do not need to upload it to GitHub unless you want to keep it as reference.
 
 ## How to Upload to GitHub
 
@@ -58,85 +91,24 @@ This is only for future Google Apps Script contact form integration. You do not 
 9. Select folder: /root.
 10. Save.
 
-## How to Edit Website Content
+## GitHub Pages Link Format
 
-Open:
-
-```text
-config.js
-```
-
-You can edit:
-
-- Website version
-- Last update
-- Hero headline
-- Hero subtitle
-- Courses Offered
-- News items
-
-## How to Replace the Hero Image
-
-Replace:
+For this repository:
 
 ```text
-hero-placeholder.svg
+https://github.com/panpacificu/pace-official
 ```
 
-Then update this line in `styles.css` only if your new image has a different file name:
-
-```css
-url("hero-placeholder.svg")
-```
-
-Example:
-
-```css
-url("pace-hero.jpg")
-```
-
-## How to Add a New Page Later
-
-1. Duplicate `about.html`.
-2. Rename it, for example:
+The GitHub Pages link should be:
 
 ```text
-programs.html
+https://panpacificu.github.io/pace-official/
 ```
 
-3. Add this link to the navigation menu in all HTML files:
-
-```html
-<a href="programs.html">Programs</a>
-```
-
-## Footer
-
-The footer is controlled through:
+## Optional File
 
 ```text
-config.js
+Code.gs
 ```
 
-Current footer includes:
-
-- PACE
-- pace@panpacificu.edu.ph
-- Version
-- Last Update
-
-
-## v1.0.1 Typography Update
-
-Updated the site typography to feel less blocky and more appropriate for a school website.
-
-Changes made:
-
-- Added Inter through Google Fonts.
-- Reduced extra-heavy headline weight.
-- Improved tight kerning without making the text too compressed.
-- Softer navigation and card typography.
-- Improved readability with smoother line height and font rendering.
-- Updated footer version to `1.0.1`.
-
-Last typography update: June 19, 2026 02:58 AM
+This is only for future Google Apps Script contact form integration.
