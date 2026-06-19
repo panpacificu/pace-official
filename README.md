@@ -2,8 +2,8 @@
 
 Professional Advancement Continuing Education website starter for GitHub Pages.
 
-Current Version: `1.0.9`  
-Last Update: `June 19, 2026 11:42 AM`
+Current Version: `1.1.0`  
+Last Update: `June 19, 2026 11:48 AM`
 
 This version is simplified for easier GitHub uploading.
 
@@ -228,3 +228,15 @@ status | order | date | category | title | excerpt | image | url | createdAt
 - Aligned `Professional Advancement Continuing Education (PACE)` with the email row.
 - Preserved the compact footer height and lower address line.
 - Updated cache-busting parameters to version 1.0.9.
+
+
+## v1.1.0 About Page
+
+- Replaced the About placeholder with a complete responsive page.
+- Added an About PACE introduction and overview.
+- Added sections for PACE's role, accessible learning, career development, and workforce excellence.
+- Added audience cards for Learners, Workers, and Employers.
+- Added partnership cards for Academe, Industry, and Government.
+- Added the PACE commitment statement.
+- Adapted the source information into concise website copy.
+- Updated all cache-busting parameters to `1.1.0`.
