@@ -2,8 +2,8 @@
 
 Professional Advancement Continuing Education website starter for GitHub Pages.
 
-Current Version: `1.0.2`  
-Last Update: `June 19, 2026 03:06 AM`
+Current Version: `1.0.4`  
+Last Update: `June 19, 2026 03:15 AM`
 
 This version is simplified for easier GitHub uploading.
 
@@ -27,69 +27,96 @@ styles.css
 config.js
 script.js
 hero-placeholder.svg
+news-preview-1.svg
+news-preview-2.svg
+news-preview-3.svg
 Code.gs
 README.md
 ```
 
-## Pages Included
+## v1.0.3 Updates
 
-Main pages:
+- Added portfolio-style news preview cards.
+- Prepared News section for future Google Sheets + Apps Script integration.
+- Added fallback preview news through `config.js`.
+- Removed visible developer notes from homepage and inner pages.
+- Kept the single-folder structure for easier GitHub upload.
 
-- Home
-- About
-- Admission
-- Contact Us
+## News Section Setup
 
-Course pages:
-
-- Certificate in Teaching (CIT)
-- Expanded Tertiary Education Equivalency and Accreditation Program (ETEEAP)
-- Licensure Examination Review (LER)
-- PACE Panpacific Language Center (PLC)
-- Panpacific Graduate School (PGS)
-- Technical-Vocational Education and Training (TVET-TESDA)
-- Training & Services
-
-## v1.0.2 Updates
-
-- Added one page per course.
-- Homepage course cards are now clickable.
-- Section spacing was made more compact.
-- Footer height was reduced.
-- Version and Last Update are still controlled through `config.js`.
-
-## How to Edit Course Cards
-
-Open:
+For now, the News section uses preview news from:
 
 ```text
 config.js
 ```
 
-Edit the `courses` array.
-
-Each course card has:
+Look for:
 
 ```js
-icon: "CIT",
-title: "Certificate in Teaching",
-description: "Course description here.",
-meta: "View course details",
-url: "course-cit.html"
+previewNews: []
 ```
 
-## How to Upload to GitHub
+## Future Google Sheet News Setup
 
-1. Open your GitHub repository.
-2. Click Add file.
-3. Click Upload files.
-4. Drag all the files from this folder.
-5. Commit changes.
-6. Go to Settings.
-7. Open Pages.
-8. Select branch: main.
-9. Select folder: /root.
-10. Save.
+When ready, create a Google Sheet and add this Apps Script file:
+
+```text
+Code.gs
+```
+
+The script will create or use a sheet named:
+
+```text
+PACE News
+```
+
+Required columns:
+
+```text
+status
+order
+date
+category
+title
+excerpt
+image
+url
+createdAt
+```
+
+Only rows with this status will appear on the website:
+
+```text
+published
+```
+
+## Connecting Google Sheet News to Website
+
+After deploying Apps Script as a Web App, copy the Web App URL.
+
+Then open:
+
+```text
+config.js
+```
+
+Change:
+
+```js
+newsSheetApi: {
+  enabled: false,
+  webAppUrl: ""
+}
+```
+
+To:
+
+```js
+newsSheetApi: {
+  enabled: true,
+  webAppUrl: "YOUR_APPS_SCRIPT_WEB_APP_URL"
+}
+```
 
 ## GitHub Pages Link Format
 
@@ -105,10 +132,43 @@ The GitHub Pages link should be:
 https://panpacificu.github.io/pace-official/
 ```
 
-## Optional File
+## v1.0.4 Live News Connection
+
+The website is now connected to the deployed PACE Apps Script Web App.
+
+Configured in:
 
 ```text
-Code.gs
+config.js
 ```
 
-This is only for future Google Apps Script contact form integration.
+Current setting:
+
+```js
+newsSheetApi: {
+  enabled: true,
+  webAppUrl: "https://script.google.com/macros/s/AKfycbyTzJBkagqjbbXPztC4TiQ5w6XMl-JIbtMNaTvLEeHdeLKWrv0ICCy92Qho0h-wvig/exec"
+}
+```
+
+The website requests:
+
+```text
+?action=news
+```
+
+The website will display rows from the `PACE News` sheet when:
+
+```text
+status = published
+```
+
+If the Apps Script request fails or the sheet has no published rows, the website automatically displays the preview news stored in `config.js`.
+
+### Google Sheet headers
+
+Use this exact order:
+
+```text
+status | order | date | category | title | excerpt | image | url | createdAt
+```

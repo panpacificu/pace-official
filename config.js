@@ -1,21 +1,20 @@
-/* =========================================================
-   PACE Website Config
-   Edit this file for quick content updates.
-   Version updates should be reflected here and in README.md.
-   ========================================================= */
-
 const PACE_CONFIG = {
   siteName: "PACE",
   fullName: "Professional Advancement Continuing Education",
   email: "pace@panpacificu.edu.ph",
 
-  version: "1.0.2",
-  lastUpdate: "June 19, 2026 03:06 AM",
+  version: "1.0.4",
+  lastUpdate: "June 19, 2026 03:15 AM",
 
   hero: {
     eyebrow: "Professional Advancement Continuing Education",
     title: "Professional growth starts here.",
     subtitle: "PACE offers continuing education, professional advancement, licensure review, language learning, graduate school pathways, technical-vocational training, and customized training services."
+  },
+
+  newsSheetApi: {
+    enabled: true,
+    webAppUrl: "https://script.google.com/macros/s/AKfycbyTzJBkagqjbbXPztC4TiQ5w6XMl-JIbtMNaTvLEeHdeLKWrv0ICCy92Qho0h-wvig/exec"
   },
 
   courses: [
@@ -70,21 +69,30 @@ const PACE_CONFIG = {
     }
   ],
 
-  news: [
+  previewNews: [
     {
-      date: "Coming Soon",
-      title: "PACE website is now being prepared",
-      description: "Official announcements, enrollment schedules, and program updates will be posted here."
+      date: "June 2026",
+      category: "Announcement",
+      title: "PACE prepares its official online information hub",
+      excerpt: "The Professional Advancement Continuing Education website is being developed to provide centralized access to programs, updates, and admission information.",
+      image: "news-preview-1.svg",
+      url: "#"
     },
     {
-      date: "Coming Soon",
-      title: "Courses and programs will be added soon",
-      description: "This section is ready for future PACE news and updates."
+      date: "June 2026",
+      category: "Programs",
+      title: "Continuing education programs to be featured soon",
+      excerpt: "PACE will highlight professional development pathways, licensure review, language learning, graduate school opportunities, and training services.",
+      image: "news-preview-2.svg",
+      url: "#"
     },
     {
-      date: "Coming Soon",
-      title: "Admission details to follow",
-      description: "Admission requirements and application guidelines will be posted once finalized."
+      date: "June 2026",
+      category: "Admission",
+      title: "Admission information and inquiry process to follow",
+      excerpt: "Future updates will include requirements, schedules, application steps, contact channels, and downloadable resources for interested learners.",
+      image: "news-preview-3.svg",
+      url: "#"
     }
   ]
 };

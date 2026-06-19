@@ -51,17 +51,48 @@ function renderCourses() {
   }).join("");
 }
 
-function renderNews() {
+async function renderNews() {
   const grid = document.getElementById("newsGrid");
   if (!grid || typeof PACE_CONFIG === "undefined") return;
 
-  grid.innerHTML = PACE_CONFIG.news.map(item => `
-    <article class="news-card">
-      <div class="card-meta">${escapeHTML(item.date)}</div>
-      <h3>${escapeHTML(item.title)}</h3>
-      <p>${escapeHTML(item.description)}</p>
-    </article>
-  `).join("");
+  let newsItems = PACE_CONFIG.previewNews || [];
+
+  if (
+    PACE_CONFIG.newsSheetApi &&
+    PACE_CONFIG.newsSheetApi.enabled &&
+    PACE_CONFIG.newsSheetApi.webAppUrl
+  ) {
+    try {
+      const response = await fetch(PACE_CONFIG.newsSheetApi.webAppUrl + "?action=news");
+      const result = await response.json();
+
+      if (result.success && Array.isArray(result.news) && result.news.length) {
+        newsItems = result.news;
+      }
+    } catch (error) {
+      console.warn("PACE news fallback used:", error);
+    }
+  }
+
+  grid.innerHTML = newsItems.map(item => {
+    const image = item.image || "news-preview-1.svg";
+    const url = item.url || "#";
+
+    return `
+      <a class="news-card" href="${escapeHTML(url)}">
+        <div class="news-image" style="background-image: url('${escapeHTML(image)}');"></div>
+        <div class="news-content">
+          <div class="news-meta">
+            <span>${escapeHTML(item.category || "PACE News")}</span>
+            <span>${escapeHTML(item.date || "")}</span>
+          </div>
+          <h3>${escapeHTML(item.title)}</h3>
+          <p>${escapeHTML(item.excerpt || item.description || "")}</p>
+          <div class="card-meta">Read update</div>
+        </div>
+      </a>
+    `;
+  }).join("");
 }
 
 function renderFooterMeta() {

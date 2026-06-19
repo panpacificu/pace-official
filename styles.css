@@ -1,7 +1,7 @@
 /* =========================================================
    PACE Website Starter
-   Version: 1.0.2
-   Course Pages + Compact Layout Update
+   Version: 1.0.4
+   News Sheet Ready + Clean Page Copy Update
    For GitHub Pages + optional Google Apps Script integration
    ========================================================= */
 
@@ -316,12 +316,58 @@ h1 {
 }
 
 
-.course-card,
-.news-card {
+.course-card {
   padding: 24px;
-  min-height: 230px;
+  min-height: 220px;
   display: flex;
   flex-direction: column;
+}
+
+.news-card {
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  color: inherit;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+}
+
+.news-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(0, 87, 184, 0.24);
+  box-shadow: 0 18px 58px rgba(7, 27, 51, 0.14);
+}
+
+.news-image {
+  min-height: 150px;
+  background-size: cover;
+  background-position: center;
+  background-color: var(--pace-light-blue);
+}
+
+.news-content {
+  padding: 22px;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.news-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 14px;
+  color: var(--pace-blue);
+  font-size: 0.78rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+.news-meta span {
+  padding: 6px 9px;
+  border-radius: 999px;
+  background: rgba(0, 87, 184, 0.08);
 }
 
 .course-icon {
@@ -478,7 +524,7 @@ h1 {
 /* Footer */
 
 .site-footer {
-  padding: 26px 0;
+  padding: 22px 0;
   color: rgba(255, 255, 255, 0.82);
   background: var(--pace-navy);
 }
