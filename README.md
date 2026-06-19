@@ -2,8 +2,8 @@
 
 Professional Advancement Continuing Education website starter for GitHub Pages.
 
-Current Version: `1.0.5`  
-Last Update: `June 19, 2026 03:21 AM`
+Current Version: `1.0.6`  
+Last Update: `June 19, 2026 03:26 AM`
 
 This version is simplified for easier GitHub uploading.
 
@@ -185,3 +185,14 @@ status | order | date | category | title | excerpt | image | url | createdAt
   - `pace.it@panpacificu.edu.ph`
 - Retained the website version and last-update information.
 - Added `panpacific-university-logo.png` as the optimized header logo.
+
+
+## v1.0.6 Logo and Footer Fix
+
+- Rebuilt the Panpacific University header logo as a native 58 × 58 px square icon.
+- Added explicit HTML width and height values to prevent stretching or oversized rendering.
+- Matched the university logo box to the PACE box dimensions.
+- Removed the oversized logo layout from the previous version.
+- Rebuilt the footer into a compact three-column grid.
+- Moved version and last-update details into the third footer column.
+- Added cache-busting parameters to `styles.css`, `config.js`, and `script.js`.

@@ -5,17 +5,20 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Training & Services | PACE</title>
   <meta name="description" content="Training & Services under PACE - Professional Advancement Continuing Education." />
-  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="styles.css?v=1.0.6" />
 </head>
 <body>
   <header class="site-header" id="siteHeader">
     <a href="index.html" class="brand" aria-label="PACE Home">
-      <img
-        src="panpacific-university-logo.png"
-        alt="Panpacific University"
-        class="university-logo"
-      />
-      <span class="brand-divider" aria-hidden="true"></span>
+      <span class="university-logo-box">
+        <img
+          src="panpacific-university-logo.png"
+          alt="Panpacific University"
+          class="university-logo"
+          width="58"
+          height="58"
+        />
+      </span>
       <span class="brand-mark">PACE</span>
       <span class="brand-text">Professional Advancement<br />Continuing Education</span>
     </a>
@@ -75,46 +78,36 @@
   </main>
 
   <footer class="site-footer">
-    <div class="container footer-main">
-      <div class="footer-office">
+    <div class="container footer-grid">
+      <div class="footer-column footer-identity">
         <h3>Panpacific University</h3>
         <p>Professional Advancement Continuing Education (PACE)</p>
+      </div>
+
+      <div class="footer-column footer-address">
+        <p class="footer-label">Office</p>
         <address>
           4F, PCST Building<br />
-          MacArthur Highway, Urdaneta City,<br />
-          Philippines, 2428
+          MacArthur Highway, Urdaneta City, Philippines, 2428
         </address>
       </div>
 
-      <div class="footer-contact">
-        <h3>Connect with us</h3>
-        <div class="footer-email-grid">
-          <a href="mailto:pace@panpacificu.edu.ph">
-            <span class="footer-email-icon" aria-hidden="true"></span>
-            pace@panpacificu.edu.ph
-          </a>
-          <a href="mailto:cit@panpacificu.edu.ph">
-            <span class="footer-email-icon" aria-hidden="true"></span>
-            cit@panpacificu.edu.ph
-          </a>
-          <a href="mailto:pace.it@panpacificu.edu.ph">
-            <span class="footer-email-icon" aria-hidden="true"></span>
-            pace.it@panpacificu.edu.ph
-          </a>
+      <div class="footer-column footer-connect">
+        <p class="footer-label">Connect with us</p>
+        <div class="footer-email-list">
+          <a href="mailto:pace@panpacificu.edu.ph">pace@panpacificu.edu.ph</a>
+          <a href="mailto:cit@panpacificu.edu.ph">cit@panpacificu.edu.ph</a>
+          <a href="mailto:pace.it@panpacificu.edu.ph">pace.it@panpacificu.edu.ph</a>
         </div>
-      </div>
-    </div>
-
-    <div class="container footer-bottom">
-      <p>PACE · Panpacific University</p>
-      <div class="footer-meta">
-        <span>Version <strong id="siteVersion">1.0.0</strong></span>
-        <span>Last Update <strong id="lastUpdate">—</strong></span>
+        <div class="footer-meta">
+          <span>v<span id="siteVersion">1.0.0</span></span>
+          <span>Updated <span id="lastUpdate">—</span></span>
+        </div>
       </div>
     </div>
   </footer>
 
-  <script src="config.js"></script>
-  <script src="script.js"></script>
+  <script src="config.js?v=1.0.6"></script>
+  <script src="script.js?v=1.0.6"></script>
 </body>
 </html>
