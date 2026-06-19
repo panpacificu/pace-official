@@ -40,12 +40,19 @@ function renderCourses() {
 
   grid.innerHTML = PACE_CONFIG.courses.map(course => {
     const url = course.url || "#";
+    const image = course.image || "course-preview-cit.png";
+
     return `
       <a class="course-card" href="${escapeHTML(url)}">
-        <div class="course-icon">${escapeHTML(course.icon)}</div>
-        <h3>${escapeHTML(course.title)}</h3>
-        <p>${escapeHTML(course.description)}</p>
-        <div class="card-meta">${escapeHTML(course.meta)}</div>
+        <div class="course-image" style="background-image: url('${escapeHTML(image)}');"></div>
+        <div class="course-content">
+          <div class="course-meta">
+            <span>${escapeHTML(course.category || "PACE Program")}</span>
+          </div>
+          <h3>${escapeHTML(course.title)}</h3>
+          <p>${escapeHTML(course.description)}</p>
+          <div class="card-meta">${escapeHTML(course.meta || "View course details")}</div>
+        </div>
       </a>
     `;
   }).join("");

@@ -3,13 +3,13 @@ const PACE_CONFIG = {
   fullName: "Professional Advancement Continuing Education",
   email: "pace@panpacificu.edu.ph",
 
-  version: "1.0.7",
-  lastUpdate: "June 19, 2026 03:31 AM",
+  version: "1.0.8",
+  lastUpdate: "June 19, 2026 11:37 AM",
 
   hero: {
     eyebrow: "Professional Advancement Continuing Education",
     title: "Professional growth starts here.",
-    subtitle: "PACE offers continuing education, professional advancement, licensure review, language learning, graduate school pathways, technical-vocational training, and customized training services."
+    subtitle: "PACE offers continuing education, professional advancement, licensure review, language learning, graduate school pathways, and technical-vocational education."
   },
 
   newsSheetApi: {
@@ -19,53 +19,52 @@ const PACE_CONFIG = {
 
   courses: [
     {
-      icon: "CIT",
+      category: "Professional Education",
+      image: "course-preview-cit.png",
       title: "Certificate in Teaching",
       description: "A professional education pathway for individuals preparing for teaching-related qualifications and career advancement.",
       meta: "View course details",
       url: "course-cit.html"
     },
     {
-      icon: "ETEEAP",
+      category: "Academic Equivalency",
+      image: "course-preview-eteeap.png",
       title: "Expanded Tertiary Education Equivalency and Accreditation Program",
       description: "A pathway that recognizes prior learning, professional experience, and relevant competencies toward academic equivalency.",
       meta: "View course details",
       url: "course-eteeap.html"
     },
     {
-      icon: "LER",
+      category: "Licensure Review",
+      image: "course-preview-ler.png",
       title: "Licensure Examination Review",
       description: "Review programs designed to support learners and professionals preparing for licensure examinations.",
       meta: "View course details",
       url: "course-ler.html"
     },
     {
-      icon: "PLC",
+      category: "Language Education",
+      image: "course-preview-plc.png",
       title: "PACE Panpacific Language Center",
       description: "Language learning and communication programs for academic, professional, and international readiness.",
       meta: "View course details",
       url: "course-plc.html"
     },
     {
-      icon: "PGS",
+      category: "Graduate Education",
+      image: "course-preview-pgs.png",
       title: "Panpacific Graduate School",
       description: "Graduate-level academic and professional development programs for advanced learning and leadership growth.",
       meta: "View course details",
       url: "course-pgs.html"
     },
     {
-      icon: "TVET",
+      category: "Technical-Vocational",
+      image: "course-preview-tvet.png",
       title: "Technical-Vocational Education and Training (TVET-TESDA)",
       description: "Technical-vocational training programs aligned with skills development, certification, and employability.",
       meta: "View course details",
       url: "course-tvet-tesda.html"
-    },
-    {
-      icon: "TS",
-      title: "Training & Services",
-      description: "Customized training, workshops, and professional services for individuals, organizations, and partner institutions.",
-      meta: "View course details",
-      url: "course-training-services.html"
     }
   ],
 

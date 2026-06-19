@@ -2,8 +2,8 @@
 
 Professional Advancement Continuing Education website starter for GitHub Pages.
 
-Current Version: `1.0.7`  
-Last Update: `June 19, 2026 03:31 AM`
+Current Version: `1.0.8`  
+Last Update: `June 19, 2026 11:37 AM`
 
 This version is simplified for easier GitHub uploading.
 
@@ -207,3 +207,16 @@ status | order | date | category | title | excerpt | image | url | createdAt
 - Displayed the complete office address as one full-width line.
 - Confirmed all three contact emails use clickable `mailto:` links.
 - Updated cache-busting parameters to v1.0.7.
+
+
+## v1.0.8 Complete Logo, Footer Line, and Course Previews
+
+- Added the complete Panpacific University logo, including the university wordmark.
+- Preserved the official logo proportions without stretching.
+- Moved the complete address into the lower footer line:
+  `PACE · Panpacific University · 4F, PCST Building, MacArthur Highway, Urdaneta City, Philippines, 2428`
+- Confirmed all contact email addresses use clickable `mailto:` links.
+- Removed the Training & Services course card and page.
+- Redesigned all six remaining course cards using visual preview images.
+- Course previews now follow the same image-first layout as the News cards.
+- Added cache-busting parameters for version 1.0.8.
