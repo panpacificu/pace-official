@@ -124,3 +124,19 @@ Current footer includes:
 - pace@panpacificu.edu.ph
 - Version
 - Last Update
+
+
+## v1.0.1 Typography Update
+
+Updated the site typography to feel less blocky and more appropriate for a school website.
+
+Changes made:
+
+- Added Inter through Google Fonts.
+- Reduced extra-heavy headline weight.
+- Improved tight kerning without making the text too compressed.
+- Softer navigation and card typography.
+- Improved readability with smoother line height and font rendering.
+- Updated footer version to `1.0.1`.
+
+Last typography update: June 19, 2026 02:58 AM

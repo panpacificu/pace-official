@@ -1,8 +1,11 @@
 /* =========================================================
    PACE Website Starter
-   Version: 1.0.0
+   Version: 1.0.1
+   Typography Update: Inter with tighter academic kerning
    For GitHub Pages + optional Google Apps Script integration
    ========================================================= */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;750;800&display=swap');
 
 :root {
   --pace-blue: #0057b8;
@@ -30,10 +33,14 @@ html {
 
 body {
   margin: 0;
-  font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-family: "Inter", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
   color: var(--pace-navy);
   background: #f8fbff;
-  line-height: 1.6;
+  line-height: 1.65;
+  letter-spacing: -0.012em;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 a {
@@ -87,8 +94,8 @@ code {
   border-radius: 18px;
   display: grid;
   place-items: center;
-  font-weight: 900;
-  letter-spacing: -0.04em;
+  font-weight: 700;
+  letter-spacing: -0.045em;
   color: white;
   background: linear-gradient(135deg, var(--pace-blue), var(--pace-green));
   box-shadow: 0 14px 35px rgba(0, 87, 184, 0.25);
@@ -96,11 +103,11 @@ code {
 
 .brand-text {
   font-size: 0.82rem;
-  font-weight: 800;
-  line-height: 1.1;
+  font-weight: 700;
+  line-height: 1.14;
   color: var(--pace-deep-blue);
   text-transform: uppercase;
-  letter-spacing: 0.03em;
+  letter-spacing: 0.012em;
 }
 
 .site-nav {
@@ -113,7 +120,7 @@ code {
   padding: 10px 14px;
   border-radius: 999px;
   color: var(--pace-muted);
-  font-weight: 700;
+  font-weight: 650;
   font-size: 0.94rem;
   transition: 0.2s ease;
 }
@@ -175,10 +182,10 @@ code {
 .eyebrow {
   margin: 0 0 12px;
   color: var(--pace-green);
-  font-size: 0.84rem;
-  font-weight: 900;
+  font-size: 0.82rem;
+  font-weight: 700;
   text-transform: uppercase;
-  letter-spacing: 0.16em;
+  letter-spacing: 0.12em;
 }
 
 .hero-section .eyebrow {
@@ -189,16 +196,16 @@ h1,
 h2,
 h3 {
   margin-top: 0;
-  line-height: 0.98;
-  letter-spacing: -0.055em;
+  line-height: 1.02;
+  letter-spacing: -0.045em;
 }
 
 h1 {
   max-width: 860px;
   margin-bottom: 22px;
   color: white;
-  font-size: clamp(3rem, 8vw, 6.8rem);
-  font-weight: 950;
+  font-size: clamp(3rem, 7.5vw, 6.2rem);
+  font-weight: 800;
 }
 
 .hero-copy {
@@ -222,7 +229,7 @@ h1 {
   padding: 0 20px;
   border-radius: 999px;
   border: 1px solid transparent;
-  font-weight: 850;
+  font-weight: 700;
   cursor: pointer;
 }
 
@@ -266,8 +273,8 @@ h1 {
 .section-heading h2 {
   margin-bottom: 14px;
   color: var(--pace-deep-blue);
-  font-size: clamp(2.2rem, 5vw, 4.6rem);
-  font-weight: 950;
+  font-size: clamp(2.1rem, 4.6vw, 4.1rem);
+  font-weight: 780;
 }
 
 .section-heading p {
@@ -317,8 +324,9 @@ h1 {
 .news-card h3 {
   margin-bottom: 12px;
   color: var(--pace-deep-blue);
-  font-size: 1.45rem;
-  line-height: 1.08;
+  font-size: 1.35rem;
+  line-height: 1.16;
+  letter-spacing: -0.035em;
 }
 
 .course-card p,
@@ -332,7 +340,7 @@ h1 {
   padding-top: 22px;
   color: var(--pace-blue);
   font-size: 0.88rem;
-  font-weight: 850;
+  font-weight: 700;
 }
 
 /* Inner Pages */
@@ -363,7 +371,8 @@ h1 {
 .contact-card h2 {
   margin-bottom: 12px;
   color: var(--pace-deep-blue);
-  font-size: 2rem;
+  font-size: 1.85rem;
+  letter-spacing: -0.035em;
 }
 
 .blank-page-card p,
@@ -383,7 +392,7 @@ h1 {
 
 .contact-card a {
   color: var(--pace-blue);
-  font-weight: 800;
+  font-weight: 700;
 }
 
 .is-disabled {
@@ -421,7 +430,7 @@ h1 {
 
 .site-footer a {
   color: #9dffe2;
-  font-weight: 800;
+  font-weight: 700;
 }
 
 .footer-meta {

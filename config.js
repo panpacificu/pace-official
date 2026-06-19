@@ -9,8 +9,8 @@ const PACE_CONFIG = {
   fullName: "Professional Advancement Continuing Education",
   email: "pace@panpacificu.edu.ph",
 
-  version: "1.0.0",
-  lastUpdate: "June 19, 2026 02:49 AM",
+  version: "1.0.1",
+  lastUpdate: "June 19, 2026 02:58 AM",
 
   hero: {
     eyebrow: "Professional Advancement Continuing Education",
