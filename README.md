@@ -2,8 +2,8 @@
 
 Professional Advancement Continuing Education website starter for GitHub Pages.
 
-Current Version: `1.0.6`  
-Last Update: `June 19, 2026 03:26 AM`
+Current Version: `1.0.7`  
+Last Update: `June 19, 2026 03:31 AM`
 
 This version is simplified for easier GitHub uploading.
 
@@ -196,3 +196,14 @@ status | order | date | category | title | excerpt | image | url | createdAt
 - Rebuilt the footer into a compact three-column grid.
 - Moved version and last-update details into the third footer column.
 - Added cache-busting parameters to `styles.css`, `config.js`, and `script.js`.
+
+
+## v1.0.7 Refined University Logo and Footer
+
+- Recreated the header logo from the newly supplied Panpacific University file.
+- Preserved the original logo proportions without stretching.
+- Matched the university logo container height to the PACE box.
+- Kept the footer compact.
+- Displayed the complete office address as one full-width line.
+- Confirmed all three contact emails use clickable `mailto:` links.
+- Updated cache-busting parameters to v1.0.7.
